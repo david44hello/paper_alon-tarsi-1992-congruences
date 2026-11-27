@@ -1,0 +1,16 @@
+# AlonTarsiPaper1 — Lean 4 formalization of Alon-Tarsi congruences modulo divisors of (n!)^3.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
+name = "AlonTarsiPaper1"
+version = "0.1.0"
+defaultTargets = ["AlonTarsi"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "AlonTarsi"
+globs = ["AlonTarsi", "AlonTarsi.+"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false }
+weakLeanArgs = ["-j1"]
