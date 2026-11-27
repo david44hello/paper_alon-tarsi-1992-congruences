@@ -1,15 +1,21 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Circuit
-import AlonTarsi.Proofs.LatinBasics
-import AlonTarsi.Proofs.Quadratic
-import Mathlib.GroupTheory.Perm.Cycle.Basic
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Algebra.Polynomial.Eval.Defs
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Algebra.MvPolynomial.CommRing
-import Mathlib.Data.Fintype.Perm
+public import AlonTarsi.Defs.Circuit
+public import AlonTarsi.Proofs.LatinBasics
+public import AlonTarsi.Proofs.Quadratic
+public import Mathlib.GroupTheory.Perm.Cycle.Basic
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Algebra.Order.BigOperators.GroupWithZero.Finset
+public import Mathlib.Algebra.Polynomial.Eval.Defs
+public import Mathlib.Algebra.Polynomial.BigOperators
+public import Mathlib.Algebra.MvPolynomial.CommRing
+public import Mathlib.Data.Fintype.Perm
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Section 3: Circuit Partition Polynomial and Vertex Removal

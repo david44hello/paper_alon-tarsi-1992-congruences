@@ -1,6 +1,6 @@
 # Reading guide
 
-This Lean 4 library formalizes all results of *The Alon–Tarsi (1992) conjecture: for $n > 2$, congruences modulo divisors of $(n!)^3$ can prove it only at Drisko's orders*. Every claim in `AlonTarsi/Paper/Statements.lean` is proved solely from Lean 4's three standard axioms (`propext`, `Classical.choice`, `Quot.sound`), with zero custom axioms, zero cited axioms, zero `sorry`, and zero external computer checks.
+This Lean 4 library formalizes all results of *The Alon–Tarsi (1992) conjecture: for $n > 2$, congruences modulo divisors of $(n!)^3$ can prove it only at Drisko's orders*. Every claim in `AlonTarsi/Paper/Statements.lean` is proved solely from Lean 4's three standard axioms (`propext`, `Classical.choice`, `Quot.sound`), with zero custom axioms, zero cited axioms, zero `sorry`s in the proof library (`AlonTarsi.lean`, `AlonTarsi/**/*.lean`, and `RegistrySolution.lean`), and zero external computer checks; the two independent comparator challenge files (`comparator/Challenge.lean` and `lean/RegistryChallenge.lean`) intentionally contain `sorry` placeholders for the compared statements.
 
 ## Trust surface
 
@@ -31,6 +31,6 @@ Both external results cited in Section 7 of the paper — Stones–Wanless Theor
 
 ## Checking the proof library
 
-The [verification command](README.md#how-to-verify) builds the entire project, scans all Lean files for proof holes and forbidden constructs, and regenerates [AUDIT.md](AUDIT.md) from `#print axioms`. The [comparator](../comparator/README.md) compares all 43 theorems against independent `sorry`-stubbed statements that import only `AlonTarsi.Defs.*`. Its paranoid mode also checks the exported proofs with Lean's paranoid kernel, `lean4lean`, `nanoda`, `con-leche`, and `con-ron`. Release checks include a fresh build from empty, `#print axioms` audit, kernel replay via `scripts/kernel_replay.sh`, and `lake comparator` in standard and `--paranoid` modes. GitHub's hosted build runs once the repository is public.
+The [verification command](README.md#how-to-verify) builds the entire project, scans all Lean files for proof holes and forbidden constructs (allowing only the three intentional `sorry` placeholders in `RegistryChallenge.lean`), and regenerates [AUDIT.md](AUDIT.md) from `#print axioms`. The [paper comparator](../comparator/README.md) compares all 43 theorems against independent `sorry`-stubbed statements that import only `AlonTarsi.Defs.*`, and the standalone registry challenge (`RegistryChallenge.lean`, `RegistrySolution.lean`, `comparator.json`) compares Theorems A, B, and C over Mathlib alone. Paranoid mode also checks the exported proofs with Lean's paranoid kernel, `lean4lean`, `nanoda`, `con-leche`, and `con-ron`. Release checks include a fresh build from empty, `#print axioms` audit, kernel replay via `scripts/kernel_replay.sh`, and `lake comparator` in standard and `--paranoid` modes on both configurations. GitHub's hosted build and registry preflight run on the public repository.
 
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see [LICENSE](../LICENSE).

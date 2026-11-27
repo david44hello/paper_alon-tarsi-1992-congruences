@@ -1,10 +1,15 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import Mathlib.GroupTheory.Perm.Fin
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Data.Nat.Factorization.Basic
+public import AlonTarsi.Defs.Basic
+public import Mathlib.GroupTheory.Perm.Fin
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Data.Nat.Factorization.Basic
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Basic Identities for Latin Squares, Signs, Isotopies, and Normalization

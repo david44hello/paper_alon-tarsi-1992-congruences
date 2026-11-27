@@ -1,13 +1,18 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.NumberTheory.LegendreSymbol.Basic
-import Mathlib.GroupTheory.PGroup
-import Mathlib.LinearAlgebra.Matrix.Trace
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.Algebra.MvPolynomial.Basic
+public import AlonTarsi.Defs.Basic
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.NumberTheory.LegendreSymbol.Basic
+public import Mathlib.GroupTheory.PGroup
+public import Mathlib.LinearAlgebra.Matrix.Trace
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+public import Mathlib.Algebra.MvPolynomial.Basic
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Definitions for the Prime `q = n / 2` Case

@@ -1,13 +1,18 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Proofs.LatinBasics
-import AlonTarsi.Proofs.CircuitPoly
-import AlonTarsi.Proofs.Quadratic
-import AlonTarsi.Proofs.StonesWanless35
-import AlonTarsi.Proofs.SylowMid
-import AlonTarsi.Proofs.Drisko1997
-import AlonTarsi.Proofs.TwoQMobius
+public import AlonTarsi.Proofs.LatinBasics
+public import AlonTarsi.Proofs.CircuitPoly
+public import AlonTarsi.Proofs.Quadratic
+public import AlonTarsi.Proofs.StonesWanless35
+public import AlonTarsi.Proofs.SylowMid
+public import AlonTarsi.Proofs.Drisko1997
+public import AlonTarsi.Proofs.TwoQMobius
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Main Assembly and Coverage Links

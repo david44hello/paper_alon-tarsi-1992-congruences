@@ -1,11 +1,16 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import AlonTarsi.Defs.Circuit
-import AlonTarsi.Defs.TwoQ
-import AlonTarsi.Proofs.MainAssembly
-import AlonTarsi.Proofs.TwoQTraces
+public import AlonTarsi.Defs.Basic
+public import AlonTarsi.Defs.Circuit
+public import AlonTarsi.Defs.TwoQ
+public import AlonTarsi.Proofs.MainAssembly
+public import AlonTarsi.Proofs.TwoQTraces
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Formal Statements of All Paper Claims

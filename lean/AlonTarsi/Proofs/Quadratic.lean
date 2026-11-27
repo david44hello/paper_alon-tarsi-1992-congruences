@@ -1,11 +1,17 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import AlonTarsi.Defs.Circuit
-import AlonTarsi.Proofs.LatinBasics
-import Mathlib.NumberTheory.Padics.PadicVal.Basic
-import Mathlib.Data.Nat.Log
+public import AlonTarsi.Defs.Basic
+public import AlonTarsi.Defs.Circuit
+public import AlonTarsi.Proofs.LatinBasics
+public import Mathlib.NumberTheory.Padics.PadicVal.Basic
+public import Mathlib.Data.Nat.Log
+public import Mathlib.RingTheory.Coprime.Lemmas
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Quadratic Valuation Bounds (Section 4)

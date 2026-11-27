@@ -1,8 +1,13 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Proofs.TwoQRankTwoHelpers
-import Mathlib.NumberTheory.Wilson
+public import AlonTarsi.Proofs.TwoQRankTwoHelpers
+public import Mathlib.NumberTheory.Wilson
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Section 6 (Lemma 6.6): Rank-2 Classification and Divisibility by `q^5`

@@ -1,7 +1,12 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Proofs.TwoQRankTwo
+public import AlonTarsi.Proofs.TwoQRankTwo
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Section 6 (Lemmas 6.7–6.8, Proposition 6.9): Rank-One Shapes, Strata, and Reduction

@@ -1,15 +1,22 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.TwoQ
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.GroupTheory.Perm.Cycle.Concrete
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Dimension.Constructions
-import Mathlib.LinearAlgebra.FiniteDimensional.Defs
-import Mathlib.FieldTheory.Finite.Basic
-import Mathlib.NumberTheory.Padics.PadicVal.Basic
+public import AlonTarsi.Defs.TwoQ
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.GroupTheory.Perm.Cycle.Concrete
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Dimension.Constructions
+public import Mathlib.LinearAlgebra.FiniteDimensional.Defs
+public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+public import Mathlib.LinearAlgebra.FreeModule.Finite.Matrix
+public import Mathlib.FieldTheory.Finite.Basic
+public import Mathlib.NumberTheory.Padics.PadicVal.Basic
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Möbius Reduction, Signs, and Complete Maps for `q = n / 2`

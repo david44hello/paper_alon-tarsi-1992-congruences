@@ -1,11 +1,16 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import AlonTarsi.Proofs.LatinBasics
-import Mathlib.Data.ZMod.Basic
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.NumberTheory.Padics.PadicVal.Basic
+public import AlonTarsi.Defs.Basic
+public import AlonTarsi.Proofs.LatinBasics
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.NumberTheory.Padics.PadicVal.Basic
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Direct Proof of Stones–Wanless Theorem 3.5

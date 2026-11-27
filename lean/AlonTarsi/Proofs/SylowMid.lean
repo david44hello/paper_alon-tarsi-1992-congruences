@@ -1,11 +1,16 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Circuit
-import AlonTarsi.Proofs.CircuitPoly
-import Mathlib.GroupTheory.Sylow
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.GroupTheory.GroupAction.Quotient
+public import AlonTarsi.Defs.Circuit
+public import AlonTarsi.Proofs.CircuitPoly
+public import Mathlib.GroupTheory.Sylow
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.GroupTheory.GroupAction.Quotient
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Section 5: Odd Primes `q` with `n / 3 < q < n / 2`

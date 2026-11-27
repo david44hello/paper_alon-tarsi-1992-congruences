@@ -1,0 +1,64 @@
+version: v0.4
+project:
+  name: "The Alon–Tarsi (1992) conjecture: for n > 2, congruences modulo divisors of (n!)^3 can prove it only at Drisko's orders"
+  description: "Unconditional Lean 4 formalization of Theorems A, B, and C (and all 43 claims) of \"The Alon–Tarsi (1992) conjecture: for n > 2, congruences modulo divisors of (n!)^3 can prove it only at Drisko's orders\": for every even n >= 8, the obstruction integer c_n = (n!)^3 / gcd(|Δ_n|, (n!)^3) equals n - 1 when n - 1 is prime and 1 otherwise (Theorem A); for every even n >= 8 and prime q <= n - 2, the natural modulus M_q(n) = q^(v_q(n!) + v_q(n)) divides the reduced signed count D_n (Theorem B); and for every even n and prime q, the q-adic valuation of Δ_n = L^e_n - L^o_n satisfies v_q(Δ_n) >= v_q((n - 1)!) + sum_{N=1}^{n-1} f_q(n, N) >= v_q(n!(n - 1)!) + a(a - 1)/2 for a = floor(n/q), and at least v_2((n - 1)!) + n^2/4 for q = 2 (Theorem C). Both external results cited in the paper (Stones–Wanless 2012 Theorem 3.5 and Drisko 1997 Theorem 1) are proved directly from Lean's three standard axioms alone."
+  authors:
+  - Dave Goel
+  license: Apache-2.0
+  responsible_maintainers:
+  - Dave Goel
+classification:
+  arxiv:
+  - math.CO
+  - math.NT
+  - math.GR
+  msc2020:
+  - 05B15
+  - 05C45
+  - 11A07
+  - 20D20
+sources:
+- title: "The Alon–Tarsi (1992) conjecture: for n > 2, congruences modulo divisors of (n!)^3 can prove it only at Drisko's orders"
+  authors:
+  - Dave Goel
+  id: 10.5281/zenodo.24575579
+  type: paper
+  location: https://doi.org/10.5281/zenodo.24575579
+  relationship: formalizes
+status:
+  scope: "The three compared declarations are Theorems A, B, and C (AlonTarsi.Paper.thm_A, thm_B, and thm_C). All three—and all 43 declarations of the full release, including both cited inputs (Stones–Wanless 2012 Theorem 3.5 and Drisko 1997 Theorem 1)—are proved from Lean's three standard axioms alone, with zero custom axioms, zero external hypotheses, and zero computer checks."
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Quot.sound
+  - Classical.choice
+automation:
+  methods:
+  - method: agent
+    tool_setup: "AI agents wrote Lean and carried out machine checks under the author's direction."
+fidelity:
+  divergences: "All three compared statements match Theorems A, B, and C of the paper verbatim on finite Latin squares over Fin n with row and column permutation signs, reduced Latin squares fixing row 0 and column 0 to the identity, q-adic valuation v_q(0) = infinity in ENat, natural modulus M_q(n) = q^(v_q(n!) + v_q(n)), obstruction integer c_n = (n!)^3 / gcd(|Δ_n|, (n!)^3), and minimal factorial-valuation function f_q(n, N). Both published inputs cited in Section 7 (Stones–Wanless 2012 Theorem 3.5 and Drisko 1997 Theorem 1) are proved directly in Lean rather than taken as axioms."
+review:
+  status: agent-reviewed
+  reviewers:
+  - Google Gemini
+  notes: "An independent Google Gemini check matched Theorems A, B, and C to the paper and verified the Lean proofs. All 43 declarations covering the paper—including Stones–Wanless (2012) Theorem 3.5 and Drisko (1997) Theorem 1—passed a clean build from empty, whole-library kernel replay, and both standard and paranoid lake comparator checks of the full and three-theorem configurations."
+alignment:
+  namespace: AlonTarsi.Paper
+  statements:
+  - source: Theorem A
+    lean: AlonTarsi.Paper.thm_A
+    module: RegistryChallenge
+    status: proved
+    note: "For even n >= 8, c_n = n - 1 when n - 1 is prime and c_n = 1 otherwise, equivalently characterizing divisibility of Δ_n by (n!)^3 and (n!)^3 / (n - 1)."
+  - source: Theorem B
+    lean: AlonTarsi.Paper.thm_B
+    module: RegistryChallenge
+    status: proved
+    note: "For even n >= 8 and every prime q <= n - 2, the natural modulus M_q(n) = q^(v_q(n!) + v_q(n)) divides the reduced signed count D_n."
+  - source: Theorem C
+    lean: AlonTarsi.Paper.thm_C
+    module: RegistryChallenge
+    status: proved
+    note: "For every even n and every prime q, v_q(Δ_n) >= v_q((n - 1)!) + sum_{N=1}^{n-1} f_q(n, N) >= v_q(n!(n - 1)!) + a(a - 1)/2 (a = floor(n/q)), and at least v_2((n - 1)!) + n^2/4 for q = 2."

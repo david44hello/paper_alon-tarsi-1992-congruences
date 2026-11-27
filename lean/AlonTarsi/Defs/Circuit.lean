@@ -1,12 +1,18 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import Mathlib.Algebra.Polynomial.Eval.Defs
-import Mathlib.Algebra.MvPolynomial.Basic
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.Data.Fintype.Sigma
+public import AlonTarsi.Defs.Basic
+public import Mathlib.Data.ENat.Lattice
+public import Mathlib.Algebra.Polynomial.Eval.Defs
+public import Mathlib.Algebra.MvPolynomial.Basic
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.Data.Fintype.Sigma
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Multidigraphs, Circuit Partition Polynomials, and Vertex Removal

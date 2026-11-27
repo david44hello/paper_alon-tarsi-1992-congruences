@@ -1,14 +1,19 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import Mathlib.GroupTheory.Perm.Sign
-import Mathlib.NumberTheory.Padics.PadicVal.Basic
-import Mathlib.Data.ENat.Basic
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Nat.GCD.Basic
-import Mathlib.Order.Lattice.Nat
+public import Mathlib.GroupTheory.Perm.Sign
+public import Mathlib.NumberTheory.Padics.PadicVal.Basic
+public import Mathlib.Data.ENat.Basic
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.Nat.Factorial.Basic
+public import Mathlib.Data.Nat.GCD.Basic
+public import Mathlib.Order.Lattice.Nat
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Core Definitions for Latin Squares, Signs, and Congruence Moduli

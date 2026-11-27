@@ -1,9 +1,14 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Proofs.TwoQMobius
-import Mathlib.Data.ZMod.Basic
-import Mathlib.NumberTheory.Wilson
+public import AlonTarsi.Proofs.TwoQMobius
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.NumberTheory.Wilson
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Helpers for Rank-Two and Rank-Three Subgroups in `q = n / 2`

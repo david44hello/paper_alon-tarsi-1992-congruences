@@ -1,12 +1,17 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Defs.Basic
-import AlonTarsi.Defs.TwoQ
-import AlonTarsi.Proofs.LatinBasics
-import AlonTarsi.Proofs.SylowMid
-import AlonTarsi.Proofs.TwoQMobius
-import Mathlib.GroupTheory.GroupAction.Quotient
+public import AlonTarsi.Defs.Basic
+public import AlonTarsi.Defs.TwoQ
+public import AlonTarsi.Proofs.LatinBasics
+public import AlonTarsi.Proofs.SylowMid
+public import AlonTarsi.Proofs.TwoQMobius
+public import Mathlib.GroupTheory.GroupAction.Quotient
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Self-Contained Proof of Drisko (1997)

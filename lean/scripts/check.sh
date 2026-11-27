@@ -7,10 +7,21 @@ project_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 
 scan_sources() {
     local source_dir=$1 status=0 failed=0
+    local banned='sorry|admit|sorryAx|axiom|native_decide|implemented_by|extern|unsafe|debug[.]skipKernelTC|csimp'
     [[ -d "$source_dir" ]] || { echo "ERROR: missing source directory: $source_dir" >&2; return 2; }
+    # The independent registry challenge states three theorems with deliberately open proofs.
+    # Scan every other token in that file under the same policy as the solution.
+    if [[ -f "$source_dir/RegistryChallenge.lean" ]]; then
+        local challenge="$source_dir/RegistryChallenge.lean"
+        if [[ $(grep -cE ' := by sorry$' "$challenge" || true) != 3 ]] ||
+           sed -E 's/ := by sorry$/ := by/' "$challenge" | rg -nw "$banned"; then
+            echo 'ERROR: unexpected registry challenge placeholder or forbidden construct.' >&2
+            failed=1
+        fi
+    fi
     (cd "$source_dir" && rg --hidden --no-ignore -n -w --glob '*.lean' \
-        --glob '!.lake/**' --glob '!.git/**' --glob '!versions/**' \
-        'sorry|admit|sorryAx|axiom|native_decide|implemented_by|extern|unsafe|debug[.]skipKernelTC|csimp' .) || status=$?
+        --glob '!.lake/**' --glob '!.git/**' --glob '!versions/**' --glob '!/RegistryChallenge.lean' \
+        "$banned" .) || status=$?
     if (( status == 0 )); then
         echo 'ERROR: proof hole, custom axiom, or forbidden construct in local Lean sources.' >&2
         failed=1

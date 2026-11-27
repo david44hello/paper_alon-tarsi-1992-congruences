@@ -1,0 +1,16 @@
+{
+  "challenge_module": "RegistryChallenge",
+  "solution_module": "RegistrySolution",
+  "theorem_names": [
+    "AlonTarsi.Paper.thm_A",
+    "AlonTarsi.Paper.thm_B",
+    "AlonTarsi.Paper.thm_C"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

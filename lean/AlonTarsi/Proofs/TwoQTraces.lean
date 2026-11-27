@@ -1,10 +1,15 @@
+module
+
 /-
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
-import AlonTarsi.Proofs.TwoQRankOne
-import Mathlib.RingTheory.Localization.FractionRing
-import Mathlib.LinearAlgebra.Matrix.Block
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+public import AlonTarsi.Proofs.TwoQRankOne
+public import Mathlib.RingTheory.Localization.FractionRing
+public import Mathlib.LinearAlgebra.Matrix.Block
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Section 6 (Lemmas 6.10–6.11, Proposition 6.12, Theorem 6.1): Layers, Traces, and Evaluation
