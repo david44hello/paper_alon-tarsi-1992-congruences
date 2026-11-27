@@ -1,5 +1,7 @@
 # The Alon–Tarsi (1992) conjecture: for $n > 2$, congruences modulo divisors of $(n!)^3$ can prove it only at Drisko's orders
 
+The paper: https://doi.org/10.5281/zenodo.24575578
+
 ## What is in this repository:
 
 - The [Lean directory](lean/) contains the definitions, statements, proofs, audit table, and verification instructions for all results in the paper.
